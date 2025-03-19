@@ -49,7 +49,7 @@ body {
 }
 
 header {
-    background: linear-gradient(to left, violet, yellow);
+    background: linear-gradient(to left, rgb(84, 84, 250), yellow);
     color: whitesmoke;
     padding: 5px;
     display: flex;
@@ -65,6 +65,51 @@ header {
     margin-left: 10px;
 }
 
+.menu-toggle {
+    display: none; /* Hidden by default */
+    background: none;
+    border: none;
+    font-size: 30px;
+    color: whitesmoke;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 1000;
+}
+
+#menu ul {
+    list-style: none;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+#menu ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    transition: background 0.3s ease-in-out;
+}
+
+#menu ul li a:hover {
+    background: yellow;
+    color: black;
+}
+
+/* Show menu when active */
+#menu.show-menu {
+    right: 0; /* Slide into view */
+}
+
+/* Change menu button to X */
+.menu-toggle.open span {
+    content: "✖"; /* Change to 'X' */
+}
+
 nav ul {
     list-style: none;
     margin: 0;
@@ -76,21 +121,25 @@ nav ul li {
     margin: 0 15px;
 }
 
+/* Hover effect */
 nav ul li a {
     color: whitesmoke;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.5s ease-in-out;
+    transition: color 0.3s ease-in-out, text-decoration 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
     color: black;
     text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: yellow;
 }
 
 .hero {
     text-align: center;
-    background: linear-gradient(to right, violet, yellow);
+    background: linear-gradient(to right, rgb(56, 56, 250), yellow);
     padding: 50px 20px;
     color: black;
 }
@@ -131,13 +180,38 @@ footer {
 }
 
 @media (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Show button */
+    }
+
+    nav {
+        display: none; /* Hide menu by default */
+        flex-direction: column;
+        background: rgb(56, 56, 250);
+        /* height: 100vh; */
+        width: 40%;
+        position: relative;
+        top: 60px;
+        left: 0;
+        text-align: center;
+        transition: 1s;
+    }
+    
     nav ul {
         flex-direction: column;
-        align-items: center;
+        padding: 0;
     }
     
     nav ul li {
         margin: 10px 0;
+    }
+
+    nav ul li a {
+        font-size: 18px;
+    }
+
+    nav.show-menu {
+        display: flex; /* Show menu when active */
     }
     
     .features {
@@ -155,6 +229,20 @@ footer {
         font-size: 14px;
     }
     
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+    }
+    
+    nav ul li {
+        margin: 8px 0;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
     .hero {
         padding: 30px 10px;
     }
