@@ -16,13 +16,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // Start learning button
-    learnButton.addEventListener("click", function () {
-        alert("Let's start learning Luganda!");
-        window.location.href = "lessons.html";
-    });
-
-    // Toggle menu for smaller screens
     menuToggle.addEventListener("click", function () {
         menu.classList.toggle("show-menu");
+        menuToggle.classList.toggle("open");
+
+        // Change icon between ☰ and ✖
+        if (menu.classList.contains("show-menu")) {
+            menuIcon.innerHTML = "✖"; // Close icon
+        } else {
+            menuIcon.innerHTML = "&#9776;"; // Hamburger icon
+        }
     });
 });
