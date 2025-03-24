@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
-    background-color: rgb(204, 186, 162);
+    background-color: rgb(224, 213, 199);
     color: #1c1c1c;
 }
 
@@ -102,7 +102,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: lightgray;
+    background: rgb(113, 123, 196);
     border-radius: 10px;
     font-weight: bold;
     transition: transform 0.3s ease-in-out, background 0.3s;
@@ -133,7 +133,7 @@ header {
 }
 
 #resources button {
-    background-color: rgb(56, 56, 250);
+    background-color:rgb(55, 68, 164);
     color: yellow;
     padding: 10px 20px;
     border: none;
