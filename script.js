@@ -6,8 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     const menuToggle = document.getElementById("menu-toggle");
     const menu = document.getElementById("menu");
     const gradeCards = document.querySelectorAll(".grade-card");
-    const menuIcon = menuToggle.querySelector("i");
+    const menuIcon = menuToggle ? menuToggle.querySelector("i") : null;
     const resourceLinks = document.querySelectorAll(".resource-item");
+
+    // Determine the base path dynamically
+    const basePath = window.location.pathname.includes("sub_pages") ? "../" : "";
 
     // Lightbulb welcome screen effect
     if (switchButton) {
@@ -23,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Start learning button navigation
     if (learnButton) {
         learnButton.addEventListener("click", function () {
-            window.location.href = "sub_pages/grades.html";
+            window.location.href = `${basePath}sub_pages/grades.html`;
         });
     }
 
@@ -46,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
     gradeCards.forEach(card => {
         card.addEventListener("click", function () {
             const page = this.getAttribute("data-page");
-            window.location.href = `sub_pages/grades/${page}`;
+            window.location.href = `${basePath}sub_pages/grades/${page}`;
         });
     });
 
