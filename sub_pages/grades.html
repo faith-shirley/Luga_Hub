@@ -4,43 +4,37 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Luganda Learning Hub</title>
-    <link rel="stylesheet" href="style.css">
-    <script defer src="script.js"></script>
+    <title>Grades - Luganda Learning Hub</title>
+    <link rel="stylesheet" href="../style.css">
+    <script defer src="../script.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <div id="overlay">
-        <div id="bulb" class="bulb"></div>
-        <button id="light-switch" class="light-switch">Welcome!</button>
-    </div>
-
     <header>
         <div class="logo">
-            <img src="img/Luganda_logo_nb.png" alt="Luganda Learning">
+            <img src="../img/Luganda_logo_nb.png" alt="Luganda Learning">
         </div>
         <button id="menu-toggle" class="menu-toggle">
             <i class="fa fa-bars"></i>
         </button> 
         <nav id="menu">
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="sub_pages/grades.html">Grades</a></li>
-                <li><a href="sub_pages/resources.html">Resources</a></li>
-                <li><a href="sub_pages/about.html">About</a></li>
-                <li><a href="sub_pages/contact.html">Contact</a></li>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="grades.html" class="active">Grades</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
 
     <section class="hero">
-        <h1>Welcome to Luganda Learning Hub</h1>
-        <p>Explore interactive lessons, cultural insights, and engaging activities tailored for each grade level.</p>
-        <button id="start-learning">Start Learning</button>
+        <h1>Explore Grades</h1>
+        <p>Select a grade level to start learning Luganda interactively.</p>
     </section>
 
     <section id="grades">
-        <h2>Explore by Grade</h2>
+        <h2>Choose Your Grade</h2>
         <div class="grade-container">
             <div class="grade-card" data-page="kinder.html">Kinder</div>
             <div class="grade-card" data-page="grade1.html">Grade 1</div>
@@ -50,13 +44,7 @@
             <div class="grade-card" data-page="grade5.html">Grade 5</div>
         </div>
     </section>
-
-    <section id="resources">
-        <h2>Free Resources</h2>
-        <p>Find helpful links, downloadable materials, and interactive tools for learning Luganda.</p>
-        <button onclick="location.href='sub_pages/resources.html'">Explore Resources</button>
-    </section>
-
+    
     <footer>
         <p>&copy; 2025 Luganda Learning Hub. All Rights Reserved.</p>
     </footer>
