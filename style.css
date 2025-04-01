@@ -29,7 +29,7 @@ body {
 .bulb {
     width: 200px;
     height: 200px;
-    background: gray;
+    background: rgb(220, 220, 220);
     border-radius: 50%;
     margin-bottom: 20px;
     transition: background 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
@@ -41,12 +41,12 @@ body {
 }
 
 .light-switch {
-    padding: 10px 20px;
-    font-size: 18px;
+    padding: 10px 40px;
+    font-size: 20px;
     cursor: pointer;
     background: yellow;
     border: none;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 /* HEADER STYLING */
@@ -102,7 +102,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgb(113, 123, 196);
+    background: rgb(220, 220, 220);
     border-radius: 10px;
     font-weight: bold;
     transition: transform 0.3s ease-in-out, background 0.3s;
